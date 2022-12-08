@@ -33,7 +33,7 @@ public class Book {
                 this.price=price; //if condition meets
             }
             else {
-                throw new InvalidBookException("negative price can not be accepted");				//throws exception
+                throw new InvalidBookException("negative price can not be accepted");				//for throwing  exception
             }
             this.title=title;
             this.author=author;
@@ -74,11 +74,11 @@ public class Book {
 
 
 
-    //creating custom exception class
+    //creating exception classes
     class InvalidBookException extends Exception {
       //overloading InvalidBookException class
-        public InvalidBookException(String s) {    //parameterized constructor
-            super(s);    //passing 's' argument to Exception super class
+        public InvalidBookException(String s) {   
+            super(s);                              //to call the  super class
         }
     }
  class BookStore {	//main class
@@ -90,9 +90,9 @@ public class Book {
     }
 
     //operation #2
-    public void xyz(String title) {			//passing title string as argument to search
+    public void xyz(String title) {			
         for (Book b : bookList) {
-            if(title.contains(b.getTitle())) {		//condition
+            if(title.contains(b.getTitle())) {		// checking conditions
                 System.out.println(b);
                 break;
             }else {
@@ -103,9 +103,9 @@ public class Book {
     }
 
    // operation #3
-    public void setAuthor(String author) {			//passing author string as argument to search
+    public void setAuthor(String author) {			
        for (Book b : bookList) {
-           if(author.contains(b.getAuthor())) {		//condition
+           if(author.contains(b.getAuthor())) {		// checking conditions
                System.out.println(b);
                 break;
             }else {
@@ -116,9 +116,9 @@ public class Book {
    }
 
     //operation #4
-    public void displayAll() {					//displayAll method with traverse and print all the elements of bookList collection
+    public void displayAll() {					
         //traversing
-        for(Book b : bookList) {				//enhanced foreach loop
+        for(Book b : bookList) {				
             System.out.println(b);
         }
     }

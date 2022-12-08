@@ -3,50 +3,50 @@ package Library.com;
 import java.util.Scanner;
 
 public class BookUtil {
-	public static void main(String[] args){									//main method
-        BookStore obj = new BookStore();								//instantiating BookStore object
-        Scanner s  = new Scanner(System.in);								//instantiating scanner object
+	public static void main(String[] args){									
+        BookStore obj = new BookStore();	                // creating object							
+        Scanner s  = new Scanner(System.in);			// taking user input					
 
 
 
-        for(int i=1; i<=3; i++) {									//running for loop three times to add 3 book instances
-            //taking inputs from user
+        for(int i=1; i<=3; i++) {									
+          
 
             System.out.println("For book-"+i);
             System.out.println("\n Enter bookID:");
             Scanner a = new Scanner(System.in);								//instantiating scanner object
-            String bookID = a.nextLine();									//taking input for bookID
+            String bookID = a.nextLine();									//taking input for Bookid
 
             System.out.println("Enter title:");
-            Scanner b  = new Scanner(System.in);								//instantiating scanner object
-            String title = b.nextLine();									//taking input for title
+            Scanner b  = new Scanner(System.in);	   // taking bookTitle							
+            String title = b.nextLine();									
 
             System.out.println("Enter author:");
-            Scanner c  = new Scanner(System.in);								//instantiating scanner object
-            String author = c.nextLine();									//taking input for author
+            Scanner c  = new Scanner(System.in);// taking bookAuthor name								
+            String author = c.nextLine();									
 
             System.out.println("Enter category:");
-            Scanner d  = new Scanner(System.in);								//instantiating scanner object
-            String category = d.nextLine();									//taking input for category
+            Scanner d  = new Scanner(System.in);	//taking catagory name							
+            String category = d.nextLine();									
 
             System.out.println("Enter price:");
-            Scanner scanPrice  = new Scanner(System.in);								//instantiating scanner object
-            float price = scanPrice.nextFloat();									//taking input for price
+            Scanner scanPrice  = new Scanner(System.in);	// taking price							
+            float price = scanPrice.nextFloat();									
 
 
             obj.addBook(new Book(bookID,title,author,category,price));						//adding Book instances into BookStore
             obj.displayAll();
 
-            if(i!=4) {	//condition for close scanner input stream
+            if(i!=4) {	
                 continue;
             }
-            //closing all scanner input streams
+                                                           //closing all scanner input streams
             a.close();
             b.close();
             c.close();
            d.close();
             scanPrice.close();
-        }	//for loop end
+        }	
 
         System.out.println("\nEnter title to search book: ");
         String a = s.nextLine();									//taking input for price

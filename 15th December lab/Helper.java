@@ -21,12 +21,12 @@ public class Helper {
 	public static void main(String...args) throws Exception { 
 		Scanner sc= new Scanner(System.in);
 		 Main m1= new  Main();
+		 StudentLogIn sl=new StudentLogIn();
 		System.out.println("""
 				Press 1 for New Registration  :           
 				Press 2 for Login :
 				Press 3 for Admission :
 				Press 4 for Display Details :
-				Press 5 for Logout : 
 				""");   
 		int variable = sc.nextInt();
 		System.out.println("-------------------------------");
@@ -35,16 +35,13 @@ public class Helper {
 			Collectdata.Datacollect();            // calling methode by the reference 
 		  break;
 		case 2 :  
-			m1.Login();                          // calling methode by the reference 
+			sl.Login();                          // calling methode by the reference 
 			break;
 		case 3 :
 			m1.Addmission();                      // calling methode by the reference 
 		break;
 		case 4 :
 			m1.Display();             //  // calling methode by the reference 
-			break;
-		case 5 :
-		m1.logOut();                       // calling methode by the reference 
 			break;
 			default :
 				System.out.println("Take valid choise ");
